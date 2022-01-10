@@ -68,7 +68,7 @@ const calculator = {
   multiply: function (a, b) {
     console.log(a * b);
   },
-  square: function (a, b) {
+  powerOf: function (a, b) {
     console.log(a ** b);
   },
 };
@@ -77,4 +77,4 @@ calculator.add(20, 34);
 calculator.minus(200, 32);
 calculator.devide(300, 30);
 calculator.multiply(23, 53);
-calculator.square(3, 3);
+calculator.powerOf(3, 3);
