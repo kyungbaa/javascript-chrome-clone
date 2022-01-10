@@ -93,5 +93,10 @@ console.log(daysOfWeek);
 
 const toBuy = ["potato", "tomato", "pizza"];
 toBuy.push("kimbap");
-
+toBuy[2] = "water";
+console.log(toBuy[2]);
 console.log(toBuy[3]);
+
+toBuy.push("snack");
+console.log(toBuy);
+console.log(toBuy.length);

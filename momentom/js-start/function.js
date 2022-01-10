@@ -41,3 +41,40 @@ const player = {
 console.log(player.name);
 player.sayHello("Lynn");
 player.sayHello("Kyung Ba");
+
+function plus(a, b) {
+  console.log(a + b);
+}
+
+plus(34, 53);
+
+function minusFive(potato) {
+  console.log(potato - 5);
+}
+minusFive(100);
+minusFive(5, 6, 7, 8, 9, 10); // 많은 argument를 보내더라도 문제되지 않는다. 제일 앞의 값이 적용된다.
+
+// 더하기 빼기 나누기 곱하기 제곱
+const calculator = {
+  add: function (a, b) {
+    console.log(a + b);
+  },
+  minus: function (a, b) {
+    console.log(a - b);
+  },
+  devide: function (a, b) {
+    console.log(a / b);
+  },
+  multiply: function (a, b) {
+    console.log(a * b);
+  },
+  square: function (a, b) {
+    console.log(a ** b);
+  },
+};
+
+calculator.add(20, 34);
+calculator.minus(200, 32);
+calculator.devide(300, 30);
+calculator.multiply(23, 53);
+calculator.square(3, 3);
