@@ -1,0 +1,4 @@
+/*user이름 입력 후 input창 없애기*/
+.hidden {
+  display: none;
+}
