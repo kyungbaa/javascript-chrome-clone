@@ -2,7 +2,16 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
-//3
+const TODO_KEY = "todos";
+
+const toDos = [];
+
+// localStorage에 newToDo 저장하기
+function saveToDos() {
+  localStorage.setItem(TODO_KEY, JSON.stringify(toDos)); //localStorage에는 String만 저장가능하기 때문에 JSON.stringify로 String형태로 바꿔서 todos(localStorage)에 저장
+}
+
+//3 list 삭제
 function deleteToDo(event) {
   //  console.log(event);  event가 발생한 path를 알 수있다. 콘솔창 참조
   //console.log(event.target.parentElement.innerText); // parent node 확인가능 click의 target(클릭된 html)을 알 수 있음.
@@ -28,6 +37,16 @@ function handleToDoSubmit(event) {
   event.preventDefault(); // 기본 이벤트를 막음 > 새로고침 방지
   const newToDo = toDoInput.value; // toDoInput 값이 지워지기 전 newToDo에 값 저장
   toDoInput.value = ""; // toDoInput 비우기
+  toDos.push(newToDo); //newToDo할때마다 array push
   patintToDo(newToDo); // paintToDO를 호출 (인자값:newToDo)
+  saveToDos();
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+const savedToDos = localStorage.getItem(TODO_KEY);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  // 각 개별 array에 function실행시키
+  parsedToDos.forEach((item) => console.log("dd", item));
+}
