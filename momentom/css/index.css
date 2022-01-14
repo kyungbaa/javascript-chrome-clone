@@ -1,16 +1,31 @@
 body {
+  font-family: "Noto Sans KR", sans-serif;
   background-color: #2d3436;
   text-align: center;
   color: #ecf0f1;
   padding: 1%;
 }
-
-h1 {
-  font-size: 112px;
-  margin-top: 13%;
-  margin-bottom: 0px;
+.bg-glass {
+  margin: 0 auto;
+  height: 100%;
+  padding: 120px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.103);
+  box-shadow: 0 8px 32px 0 rgba(53, 54, 71, 0.37);
+  backdrop-filter: blur(10px);
 }
-
+#clock {
+  border: solid;
+}
+h1 {
+  margin: 25px;
+  font-size: 40px;
+  font-weight: 300;
+}
+h2 {
+  font-weight: 700;
+  font-size: 130px;
+}
 h5 {
   font-weight: 100;
   font-size: 22px;
@@ -49,23 +64,8 @@ button {
   background: transparent;
   font-size: 22px;
 }
+
 img {
-  width: 100%;
-}
-
-.form,
-.greetings {
-  display: none;
-}
-
-.showing {
-  display: block;
-  transition: color 0.5s ease-in-out;
-  font-size: 34px;
-  margin-top: 0px;
-}
-
-.bgImg {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,25 +73,4 @@ img {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
-}
-
-.js-temp {
-  font-weight: 500;
-  font-size: 22px;
-  padding-left: 95%;
-}
-
-.js-place {
-  font-weight: 300;
-  font-size: 12px;
-  padding-left: 95%;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
