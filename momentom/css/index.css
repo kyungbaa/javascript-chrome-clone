@@ -1,22 +1,25 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
-  background-color: #2d3436;
   text-align: center;
   color: #ecf0f1;
-  padding: 1%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 .bg-glass {
+  align-self: center;
   margin: 0 auto;
-  height: 100%;
-  padding: 120px;
+  width: 80%;
+  height: 70vh;
+  padding: 110px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.103);
+  background: rgba(255, 255, 255, 0.082);
   box-shadow: 0 8px 32px 0 rgba(53, 54, 71, 0.37);
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 }
-#clock {
-  border: solid;
-}
+
 h1 {
   margin: 25px;
   font-size: 40px;
@@ -36,7 +39,7 @@ input {
   border: none;
   background: transparent;
   font-size: 22px;
-  margin: 3px;
+  margin: 29px;
   text-align: center;
   color: #ecf0f1;
   border-bottom: 2px solid #ecf0f1;
@@ -52,6 +55,7 @@ li {
   text-align: left;
   color: #ecf0f1;
 }
+
 li:before {
   content: "🤍";
   display: inline;
@@ -73,4 +77,16 @@ img {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+#quote {
+  position: absolute;
+  bottom: 80px;
+  align-self: center;
+}
+
+#weather {
+  position: absolute;
+  bottom: 30px;
+  align-self: center;
 }
